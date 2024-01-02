@@ -11,8 +11,12 @@ import App from './app';
   }
   const dependencies = [
     {
-      method: async (args) => console.log(args),
+      method: async (args) => new Promise((resolve, reject)=> resolve('one')),
       args: [settings]
+    },
+    {
+      method: async () => new Promise((resolve, reject)=> resolve('two')),
+      args: []
     }
   ];
 

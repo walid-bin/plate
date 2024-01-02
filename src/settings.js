@@ -6,7 +6,6 @@ export default {
   'port': process.env.PORT || 4000,
   'origin': [
     '*',
-    process.env.DOMAIN
   ],
   'useHTTP2': false,
   'SMTP_HOST': '',

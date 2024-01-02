@@ -1,5 +1,5 @@
 /* this page is to add other mathod or somethig else in the process */
-console.log("[+]=> Overlode data added");
+console.log("[+] Overlode data added");
 
 /**
  * this function is used to add days with a date.
