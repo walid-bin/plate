@@ -1,4 +1,4 @@
-import express, { Router,  json, urlencoded  } from "express";
+import express, { Router, json, urlencoded } from "express";
 import form from 'express-form-data';
 import rateLimit from "express-rate-limit";
 import cors from 'cors';
@@ -40,7 +40,7 @@ export default class App {
     }
     Promise.all(this.depPromises)
       .then((res) => res && res.length > 0 && (console.log('[+] Dependencies:'), console.table(res)))
-      .then(() =>this.init())
+      .then(() => this.init())
       .catch((err) => console.log(err));
   }
 
@@ -107,13 +107,13 @@ export default class App {
   }
 
   listen() {
-     // Serve Front-end
-     this.express.get('*', (req, res) => {
+    // Serve Front-end
+    this.express.get('*', (req, res) => {
       res.sendFile(path.resolve(__dirname, '..', 'client', 'index.html'));
-     });
-    
-     // Serve Front-end
-     this.server.listen(this.config.port, () => {
+    });
+
+    // Serve Front-end
+    this.server.listen(this.config.port, () => {
       console.log(`[+] Listening on ${this.config.port}`);
     });
   }
@@ -130,7 +130,7 @@ export default class App {
       // mail: this.mail,
     });
   }
-   
+
   /**
    * Register Hooks
    * @param {function} callback function of hook
@@ -138,4 +138,4 @@ export default class App {
   hook(callback) {
     callback.call({ ...this });
   }
-}
+};

@@ -18,4 +18,4 @@ export default function gracefullShutdown() {
       return process.exit();
     }
   }));
-}
+};

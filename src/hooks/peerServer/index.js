@@ -12,4 +12,4 @@ export default function () {
   this.express.use('/peerserver', this.peer);
 
   console.log('[+] Peer Server Started!');
-}
+};
